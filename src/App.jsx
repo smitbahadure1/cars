@@ -80,13 +80,15 @@ function App() {
 
           {view === 'home' && (
             <>
-              <h1 className="text-center">Optimize your documents instantly.</h1>
-              <p className="hero-subtext text-center">
+              <h1 className="text-center animate-fade-in">Optimize your documents instantly.</h1>
+              <p className="hero-subtext text-center animate-fade-in delay-100">
                 Simple, private tools to compress and convert your PDFs and images efficiently.
               </p>
-              <UploadArea />
+              <div className="animate-slide-up delay-200" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <UploadArea />
+              </div>
 
-              <div id="features" style={{ marginTop: '6rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+              <div id="features" className="animate-fade-in delay-300" style={{ marginTop: '6rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                 <div style={{ padding: '1.5rem', background: 'var(--bg-subtle)', borderRadius: 'var(--radius)' }}>
                   <div style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>🔒</div>
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Private by Design</h3>
