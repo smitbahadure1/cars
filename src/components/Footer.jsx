@@ -40,7 +40,7 @@ export default function Footer() {
                 </div>
                 <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                     <div style={{ fontSize: '0.85rem', color: 'var(--text-tertiary)' }}>
-                        © 2024 PDF Tools. All rights reserved.
+                        © 2026 PDF Tools. All rights reserved. <span style={{ marginLeft: '10px', opacity: 0.7 }}>v0.0.1</span>
                     </div>
                     <div style={{ display: 'flex', gap: '1.5rem' }}>
                         <a href="#" style={{ color: 'var(--text-tertiary)' }}>Twitter</a>
