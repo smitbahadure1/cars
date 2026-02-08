@@ -1,42 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
-export default function Header({ onNavClick, currentView }) {
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'About', path: '/about' },
+    { name: 'Success Stories', path: '/case-studies' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   return (
-    <div style={{
-      position: 'sticky',
-      top: 0,
-      zIndex: 100,
-      background: 'rgba(255, 255, 255, 0.8)',
-      backdropFilter: 'blur(12px)',
-      borderBottom: '1px solid var(--border-color)',
-      marginBottom: '2rem'
-    }}>
-      <div className="container">
-        <nav style={{ height: '70px' }}>
-          <button
-            onClick={() => onNavClick('home')}
-            className="logo"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontFamily: 'inherit', fontSize: 'inherit' }}
-          >
-            PDF & Image Tools
-          </button>
-          <div className="nav-links">
-            <button
-              onClick={() => onNavClick('home')}
-              style={{ background: 'none', border: 'none', cursor: 'pointer', color: currentView === 'home' ? 'var(--text-main)' : 'var(--text-secondary)', fontFamily: 'inherit', fontSize: '0.9rem' }}
-            >
-              Tools
-            </button>
+    <header className={`nav-header ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="container nav-content">
+        <NavLink to="/" className="logo">
+          Luxe<span>Consult</span>
+        </NavLink>
 
-            <button
-              onClick={() => onNavClick('pricing')}
-              style={{ background: 'none', border: 'none', cursor: 'pointer', color: currentView === 'pricing' ? 'var(--text-main)' : 'var(--text-secondary)', fontFamily: 'inherit', fontSize: '0.9rem' }}
+        <nav className="nav-links">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
             >
-              Pricing
-            </button>
-          </div>
+              {item.name}
+            </NavLink>
+          ))}
         </nav>
+
+        <button
+          className="mobile-toggle"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{ display: 'none', color: 'var(--accent-gold)' }}
+        >
+          {mobileMenuOpen ? <X /> : <Menu />}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Menu MOCKUP - Can be expanded */}
+    </header>
   );
-}
+};
+
+export default Header;

@@ -1,53 +1,62 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Mail, Linkedin, Instagram, Phone } from 'lucide-react';
 
-export default function Footer() {
+const Footer = () => {
     return (
-        <div className="container">
-            <footer>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
+        <footer style={{ borderTop: '1px solid var(--border)', padding: '6rem 0 3rem' }}>
+            <div className="container">
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', marginBottom: '4rem' }}>
                     <div>
-                        <div style={{ fontWeight: 600, marginBottom: '1rem' }}>PDF Tools</div>
-                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                            Simple, secure, and powerful tools for your everyday document needs. Built with privacy in mind.
+                        <div className="logo" style={{ marginBottom: '1.5rem' }}>LuxeConsult</div>
+                        <p style={{ color: 'var(--text-secondary)', maxWidth: '300px' }}>
+                            Elevating hospitality standards through strategic consulting and operational excellence.
+                            Transforming visions into world-class guest experiences.
                         </p>
                     </div>
+
                     <div>
-                        <div style={{ fontWeight: 500, marginBottom: '1rem', fontSize: '0.9rem' }}>Product</div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                            <a href="#">Compress PDF</a>
-                            <a href="#">PDF to JPG</a>
-                            <a href="#">Merge PDF</a>
-                            <a href="#">Pricing</a>
+                        <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Quick Links</h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <NavLink to="/services" className="nav-link" style={{ fontSize: '0.9rem' }}>Services</NavLink>
+                            <NavLink to="/about" className="nav-link" style={{ fontSize: '0.9rem' }}>About Us</NavLink>
+                            <NavLink to="/case-studies" className="nav-link" style={{ fontSize: '0.9rem' }}>Case Studies</NavLink>
+                            <NavLink to="/contact" className="nav-link" style={{ fontSize: '0.9rem' }}>Contact</NavLink>
                         </div>
                     </div>
+
                     <div>
-                        <div style={{ fontWeight: 500, marginBottom: '1rem', fontSize: '0.9rem' }}>Company</div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                            <a href="#">About</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Careers</a>
-                            <a href="#">Contact</a>
+                        <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Global Offices</h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                            <p>London – Mayfair</p>
+                            <p>New York – Manhattan</p>
+                            <p>Dubai – DIFC</p>
                         </div>
                     </div>
+
                     <div>
-                        <div style={{ fontWeight: 500, marginBottom: '1rem', fontSize: '0.9rem' }}>Legal</div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Cookie Policy</a>
+                        <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Connect</h4>
+                        <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
+                            <motion.a whileHover={{ color: 'var(--accent-gold)', y: -3 }} href="#" style={{ color: 'var(--text-secondary)' }}><Linkedin size={20} /></motion.a>
+                            <motion.a whileHover={{ color: 'var(--accent-gold)', y: -3 }} href="#" style={{ color: 'var(--text-secondary)' }}><Instagram size={20} /></motion.a>
+                            <motion.a whileHover={{ color: 'var(--accent-gold)', y: -3 }} href="mailto:contact@luxeconsult.com" style={{ color: 'var(--text-secondary)' }}><Mail size={20} /></motion.a>
                         </div>
                     </div>
                 </div>
-                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-                    <div style={{ fontSize: '0.85rem', color: 'var(--text-tertiary)' }}>
-                        © 2026 PDF Tools. All rights reserved. <span style={{ marginLeft: '10px', opacity: 0.7 }}>v0.0.1</span>
-                    </div>
-                    <div style={{ display: 'flex', gap: '1.5rem' }}>
-                        <a href="#" style={{ color: 'var(--text-tertiary)' }}>Twitter</a>
-                        <a href="#" style={{ color: 'var(--text-tertiary)' }}>GitHub</a>
+
+                <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+                    <p style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>
+                        © 2026 LuxeConsult Hospitality Practice. All rights reserved.
+                    </p>
+                    <div style={{ display: 'flex', gap: '2rem' }}>
+                        <a href="#" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Privacy Policy</a>
+                        <a href="#" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Terms of Service</a>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
     );
-}
+};
+
+export default Footer;
