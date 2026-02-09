@@ -25,14 +25,14 @@ const About = () => {
                             that yields measurable financial results.
                         </p>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-                            <div>
+                            <motion.div whileHover={{ y: -5, color: 'var(--accent-gold-hover)' }} transition={{ duration: 0.3 }}>
                                 <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', color: 'var(--accent-gold)' }}>15+</div>
                                 <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-tertiary)' }}>Years Experience</div>
-                            </div>
-                            <div>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5, color: 'var(--accent-gold-hover)' }} transition={{ duration: 0.3 }}>
                                 <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', color: 'var(--accent-gold)' }}>80+</div>
-                                <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-tertiary)' }}>Properties Transformed</div>
-                            </div>
+                                <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-tertiary)' }}>Luxury Properties</div>
+                            </motion.div>
                         </div>
                     </motion.div>
 
@@ -42,10 +42,12 @@ const About = () => {
                         transition={{ duration: 1 }}
                         style={{ position: 'relative' }}
                     >
-                        <div className="glass" style={{ height: '600px', width: '100%', overflow: 'hidden' }}>
-                            {/* Mock Image Placeholder */}
-                            <div style={{ height: '100%', width: '100%', background: 'linear-gradient(45deg, #0f0f10 0%, #1a1a1c 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <div style={{ color: 'rgba(255,255,255,0.05)', fontSize: '5rem', fontWeight: 900 }}>LUXE</div>
+                        <div className="glass" style={{ height: '600px', width: '100%', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--glass-border)' }}>
+                            {/* Stylish Abstract Visual */}
+                            <div style={{ height: '100%', width: '100%', background: 'linear-gradient(135deg, #0f0f10 0%, #1a1a1c 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'radial-gradient(circle at 30% 20%, rgba(197, 160, 89, 0.08) 0%, transparent 60%)' }}></div>
+                                <div style={{ position: 'absolute', bottom: 0, right: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%)' }}></div>
+                                <div style={{ color: 'rgba(255,255,255,0.03)', fontSize: '12rem', fontFamily: 'var(--font-heading)', letterSpacing: '-0.05em', userSelect: 'none' }}>Lc</div>
                             </div>
                         </div>
                         {/* Overlay card */}
