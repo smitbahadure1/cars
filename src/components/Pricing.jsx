@@ -1,108 +1,122 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 
-export default function Pricing({ onGoBack }) {
+const Pricing = () => {
+    const packages = [
+        {
+            title: "Operational Audit",
+            price: "Assessment",
+            description: "A comprehensive deep-dive into your property's current operations, financial health, and guest experience touchpoints.",
+            features: [
+                "Full Property Inspection",
+                "Financial Performance Analysis",
+                "Staff Efficiency Review",
+                "Detailed Action Plan",
+                "Competitor Benchmarking"
+            ],
+            highlight: false
+        },
+        {
+            title: "Strategic Experience",
+            price: "Retainer",
+            description: "Ongoing partnership to implement changes, train staff, and elevate the guest experience standards continuously.",
+            features: [
+                "Bi-Weekly Strategy Calls",
+                "Executive Leadership Coaching",
+                "Seasonal Menu & Service Design",
+                "Revenue Management Optimization",
+                "Crisis Management Support",
+                "Priority On-Site Visits"
+            ],
+            highlight: true
+        },
+        {
+            title: "Brand Transformation",
+            price: "Project",
+            description: "Complete reimagining of your hotel's identity, from visual branding to the physical guest journey and narrative.",
+            features: [
+                "Brand Identity Overhaul",
+                "Interior Design Consultation",
+                "Marketing & Go-to-Market Strategy",
+                "Cultural Programming",
+                "Launch Event Planning"
+            ],
+            highlight: false
+        }
+    ];
+
     return (
-        <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto' }}>
-            <div className="text-center mb-4">
-                <h1 className="mb-2">Simple, transparent pricing.</h1>
-                <p className="hero-subtext">Support the project and unlock higher limits.</p>
-            </div>
-
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '2rem',
-                marginTop: '3rem'
-            }}>
-                {/* Free Tier */}
-                <div style={{
-                    border: '1px solid var(--border-color)',
-                    borderRadius: 'var(--radius)',
-                    padding: '2rem',
-                    display: 'flex',
-                    flexDirection: 'column'
-                }}>
-                    <div className="mono-text mb-2">FREE</div>
-                    <div style={{ fontSize: '2.5rem', fontWeight: 600, marginBottom: '0.5rem' }}>$0</div>
-                    <p style={{ fontSize: '0.9rem', marginBottom: '2rem' }}>Forever free for standard use.</p>
-
-                    <ul style={{ listStyle: 'none', marginBottom: '2rem', flex: 1 }}>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem' }}>
-                            <span>✓</span> 5 Files per day
-                        </li>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem' }}>
-                            <span>✓</span> Max 10MB per file
-                        </li>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem' }}>
-                            <span>✓</span> Standard speed
-                        </li>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem', color: 'var(--text-tertiary)' }}>
-                            <span>✕</span> Priority support
-                        </li>
-                    </ul>
-
-                    <button className="btn btn-outline" style={{ width: '100%' }} onClick={onGoBack}>
-                        Use Free Tools
-                    </button>
-                </div>
-
-                {/* Pro Tier */}
-                <div style={{
-                    border: '1px solid var(--primary-color)',
-                    borderRadius: 'var(--radius)',
-                    padding: '2rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    position: 'relative',
-                    backgroundColor: '#fafafa'
-                }}>
-                    <div style={{
-                        position: 'absolute',
-                        top: '-12px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        background: 'var(--primary-color)',
-                        color: '#fff',
-                        padding: '4px 12px',
-                        borderRadius: '100px',
-                        fontSize: '0.75rem',
-                        fontWeight: 500
-                    }}>
-                        RECOMMENDED
-                    </div>
-
-                    <div className="mono-text mb-2" style={{ color: 'var(--primary-color)' }}>PRO</div>
-                    <div style={{ fontSize: '2.5rem', fontWeight: 600, marginBottom: '0.5rem' }}>$5<span style={{ fontSize: '1rem', fontWeight: 400, color: 'var(--text-secondary)' }}>/mo</span></div>
-                    <p style={{ fontSize: '0.9rem', marginBottom: '2rem' }}>For power users and pros.</p>
-
-                    <ul style={{ listStyle: 'none', marginBottom: '2rem', flex: 1 }}>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem' }}>
-                            <span>✓</span> Unlimited files
-                        </li>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem' }}>
-                            <span>✓</span> Max 2GB per file
-                        </li>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem' }}>
-                            <span>✓</span> Batch processing
-                        </li>
-                        <li style={{ marginBottom: '0.75rem', display: 'flex', gap: '0.75rem' }}>
-                            <span>✓</span> No ads / watermark
-                        </li>
-                    </ul>
-
-                    <button className="btn btn-primary" style={{ width: '100%' }}>
-                        Upgrade to Pro
-                    </button>
-
-                    <p className="text-center mt-2" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>
-                        Secure payment via Stripe
+        <section className="section-padding">
+            <div className="container">
+                <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+                    <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+                        Invest in Excellence
+                    </h4>
+                    <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>Tailored <span style={{ fontStyle: 'italic' }}>Solutions</span></h1>
+                    <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
+                        We offer flexible engagement models designed to meet the unique needs of boutique hotels and luxury resorts at every stage.
                     </p>
                 </div>
-            </div>
 
-            <div className="text-center mt-4">
-                <p style={{ fontSize: '0.9rem' }}>Enterprise user? <a href="#">Contact us</a> for volume licensing.</p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+                    {packages.map((pkg, idx) => (
+                        <motion.div
+                            key={idx}
+                            whileHover={{ y: -10 }}
+                            className={`glass ${pkg.highlight ? 'highlight-card' : ''}`}
+                            style={{
+                                padding: '3rem',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                position: 'relative',
+                                border: pkg.highlight ? '1px solid var(--accent-gold)' : '1px solid var(--glass-border)',
+                                boxShadow: pkg.highlight ? 'var(--shadow-gold)' : 'none'
+                            }}
+                        >
+                            {pkg.highlight && (
+                                <div style={{
+                                    position: 'absolute',
+                                    top: '-12px',
+                                    left: '50%',
+                                    transform: 'translateX(-50%)',
+                                    background: 'var(--accent-gold)',
+                                    color: '#000',
+                                    padding: '0.5rem 1.5rem',
+                                    fontSize: '0.75rem',
+                                    fontWeight: 'bold',
+                                    letterSpacing: '0.1em',
+                                    textTransform: 'uppercase',
+                                    borderRadius: '2px'
+                                }}>
+                                    Most Popular
+                                </div>
+                            )}
+
+                            <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>{pkg.title}</h3>
+                            <div style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', marginBottom: '1.5rem', fontWeight: 500 }}>{pkg.price}</div>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: '1.6' }}>
+                                {pkg.description}
+                            </p>
+
+                            <ul style={{ listStyle: 'none', marginBottom: '3rem', flex: 1 }}>
+                                {pkg.features.map((feature, fIdx) => (
+                                    <li key={fIdx} style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-primary)' }}>
+                                        <Check size={16} color="var(--accent-gold)" />
+                                        <span style={{ fontSize: '0.95rem' }}>{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <button className={pkg.highlight ? 'btn btn-primary' : 'btn btn-outline'} style={{ width: '100%' }}>
+                                Inquire Now
+                            </button>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
-}
+};
+
+export default Pricing;

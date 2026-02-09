@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Users, ShieldCheck } from 'lucide-react';
 import Newsletter from '../components/Newsletter';
 
 const Home = () => {
+    const navigate = useNavigate();
+
     return (
         <main>
             {/* Hero Section */}
@@ -25,38 +28,85 @@ const Home = () => {
                             We help boutique hotels and luxury resorts optimize operations, increase RevPAR, and create unforgettable guest journeys.
                         </p>
                         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-                            <button className="btn btn-primary" onClick={() => window.location.href = '/contact'}>
+                            <button className="btn btn-primary" onClick={() => navigate('/contact')}>
                                 Book a Consultation <ArrowRight size={18} style={{ marginLeft: '10px' }} />
                             </button>
-                            <button className="btn btn-outline" onClick={() => window.location.href = '/services'}>
+                            <button className="btn btn-outline" onClick={() => navigate('/services')}>
                                 Explore Services
                             </button>
                         </div>
                     </motion.div>
                 </div>
 
-                {/* Hero Background Image Mockup/Visual */}
+                {/* Hero Abstract Visual */}
                 <div style={{
                     position: 'absolute',
-                    right: '-10%',
-                    top: '10%',
+                    right: 0,
+                    top: 0,
                     width: '50%',
-                    height: '80%',
-                    background: 'var(--bg-card)',
-                    borderRadius: '24px',
-                    transform: 'rotate(-5deg)',
+                    height: '100%',
+                    overflow: 'hidden',
                     zIndex: 1,
-                    border: '1px solid var(--border)'
+                    pointerEvents: 'none'
                 }}>
-                    <div style={{ padding: '2rem', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        {/* Mock visual stats */}
-                        <div className="glass" style={{ padding: '1.5rem', marginBottom: '1rem', width: 'fit-content' }}>
-                            <TrendingUp color="var(--accent-gold)" />
-                            <div style={{ fontSize: '1.2rem', fontWeight: 600 }}>+24% RevPAR Growth</div>
+                    <div style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        width: '120%',
+                        height: '120%',
+                        background: 'radial-gradient(circle at 70% 30%, rgba(197, 160, 89, 0.15) 0%, transparent 60%)',
+                        filter: 'blur(40px)'
+                    }}></div>
+                    <div className="glass" style={{
+                        position: 'absolute',
+                        top: '20%',
+                        right: '10%',
+                        width: '300px',
+                        padding: '2rem',
+                        transform: 'rotate(-5deg)',
+                        boxShadow: 'var(--shadow-lg)',
+                        border: '1px solid var(--glass-border)'
+                    }}>
+                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', gap: '1rem' }}>
+                            <div style={{ padding: '10px', background: 'rgba(197, 160, 89, 0.1)', borderRadius: '50%' }}>
+                                <TrendingUp color="var(--accent-gold)" size={24} />
+                            </div>
+                            <div>
+                                <div style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Revenue Growth</div>
+                                <div style={{ fontSize: '1.5rem', fontWeight: 700 }}>+24%</div>
+                            </div>
                         </div>
-                        <div className="glass" style={{ padding: '1.5rem', alignSelf: 'flex-end', width: 'fit-content' }}>
-                            <Star color="var(--accent-gold)" />
-                            <div style={{ fontSize: '1.2rem', fontWeight: 600 }}>98% Guest Satisfaction</div>
+                        <div style={{ height: '4px', width: '100%', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', overflow: 'hidden' }}>
+                            <div style={{ height: '100%', width: '75%', background: 'var(--accent-gold)' }}></div>
+                        </div>
+                    </div>
+
+                    <div className="glass" style={{
+                        position: 'absolute',
+                        top: '55%',
+                        right: '25%',
+                        width: '280px',
+                        padding: '2rem',
+                        transform: 'rotate(5deg)',
+                        boxShadow: 'var(--shadow-lg)',
+                        border: '1px solid var(--glass-border)',
+                        backdropFilter: 'blur(20px)'
+                    }}>
+                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', gap: '1rem' }}>
+                            <div style={{ padding: '10px', background: 'rgba(197, 160, 89, 0.1)', borderRadius: '50%' }}>
+                                <Star color="var(--accent-gold)" size={24} />
+                            </div>
+                            <div>
+                                <div style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Guest Satisfaction</div>
+                                <div style={{ fontSize: '1.5rem', fontWeight: 700 }}>4.9/5.0</div>
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', gap: '4px' }}>
+                            {[1, 2, 3, 4, 5].map(i => (
+                                <Star key={i} size={12} fill="var(--accent-gold)" color="var(--accent-gold)" />
+                            ))}
                         </div>
                     </div>
                 </div>

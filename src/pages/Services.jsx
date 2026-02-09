@@ -63,16 +63,30 @@ const Services = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
+                            whileHover={{ y: -5, boxShadow: 'var(--shadow-gold)', borderColor: 'rgba(197, 160, 89, 0.4)' }}
                             className="glass"
-                            style={{ padding: '3rem' }}
+                            style={{
+                                padding: '3rem',
+                                border: '1px solid var(--glass-border)',
+                                transition: 'var(--transition)'
+                            }}
                         >
-                            <div style={{ color: 'var(--accent-gold)', marginBottom: '2rem' }}>{service.icon}</div>
-                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>{service.title}</h3>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.7' }}>{service.desc}</p>
+                            <div style={{
+                                color: 'var(--accent-gold)',
+                                marginBottom: '2rem',
+                                padding: '15px',
+                                background: 'rgba(197, 160, 89, 0.1)',
+                                borderRadius: '50%',
+                                width: 'fit-content'
+                            }}>
+                                {service.icon}
+                            </div>
+                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', fontFamily: 'var(--font-heading)' }}>{service.title}</h3>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: '1.7' }}>{service.desc}</p>
 
                             <ul style={{ listStyle: 'none', padding: 0 }}>
                                 {service.features.map((feature, fIdx) => (
-                                    <li key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem', color: 'var(--text-primary)', fontSize: '0.9rem' }}>
+                                    <li key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', color: 'var(--text-primary)', fontSize: '0.95rem' }}>
                                         <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-gold)' }} />
                                         {feature}
                                     </li>
