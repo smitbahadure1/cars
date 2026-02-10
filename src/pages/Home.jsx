@@ -59,16 +59,21 @@ const Home = () => {
                         background: 'radial-gradient(circle at 70% 30%, rgba(197, 160, 89, 0.15) 0%, transparent 60%)',
                         filter: 'blur(40px)'
                     }}></div>
-                    <div className="glass" style={{
-                        position: 'absolute',
-                        top: '20%',
-                        right: '10%',
-                        width: '300px',
-                        padding: '2rem',
-                        transform: 'rotate(-5deg)',
-                        boxShadow: 'var(--shadow-lg)',
-                        border: '1px solid var(--glass-border)'
-                    }}>
+                    <motion.div
+                        className="glass"
+                        animate={{ y: [0, -12, 0] }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                        style={{
+                            position: 'absolute',
+                            top: '20%',
+                            right: '10%',
+                            width: '300px',
+                            padding: '2rem',
+                            transform: 'rotate(-5deg)',
+                            boxShadow: 'var(--shadow-lg)',
+                            border: '1px solid var(--glass-border)'
+                        }}
+                    >
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', gap: '1rem' }}>
                             <div style={{ padding: '10px', background: 'rgba(197, 160, 89, 0.1)', borderRadius: '50%' }}>
                                 <TrendingUp color="var(--accent-gold)" size={24} />
@@ -81,19 +86,24 @@ const Home = () => {
                         <div style={{ height: '4px', width: '100%', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', overflow: 'hidden' }}>
                             <div style={{ height: '100%', width: '75%', background: 'var(--accent-gold)' }}></div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="glass" style={{
-                        position: 'absolute',
-                        top: '55%',
-                        right: '25%',
-                        width: '280px',
-                        padding: '2rem',
-                        transform: 'rotate(5deg)',
-                        boxShadow: 'var(--shadow-lg)',
-                        border: '1px solid var(--glass-border)',
-                        backdropFilter: 'blur(20px)'
-                    }}>
+                    <motion.div
+                        className="glass"
+                        animate={{ y: [0, -15, 0] }}
+                        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                        style={{
+                            position: 'absolute',
+                            top: '55%',
+                            right: '25%',
+                            width: '280px',
+                            padding: '2rem',
+                            transform: 'rotate(5deg)',
+                            boxShadow: 'var(--shadow-lg)',
+                            border: '1px solid var(--glass-border)',
+                            backdropFilter: 'blur(20px)'
+                        }}
+                    >
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', gap: '1rem' }}>
                             <div style={{ padding: '10px', background: 'rgba(197, 160, 89, 0.1)', borderRadius: '50%' }}>
                                 <Star color="var(--accent-gold)" size={24} />
@@ -108,7 +118,7 @@ const Home = () => {
                                 <Star key={i} size={12} fill="var(--accent-gold)" color="var(--accent-gold)" />
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
