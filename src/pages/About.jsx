@@ -25,14 +25,8 @@ const About = () => {
                             that yields measurable financial results.
                         </p>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-                            <motion.div whileHover={{ y: -5, color: 'var(--accent-gold-hover)' }} transition={{ duration: 0.3 }}>
-                                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', color: 'var(--accent-gold)' }}>15+</div>
-                                <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-tertiary)' }}>Years Experience</div>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5, color: 'var(--accent-gold-hover)' }} transition={{ duration: 0.3 }}>
-                                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', color: 'var(--accent-gold)' }}>80+</div>
-                                <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-tertiary)' }}>Luxury Properties</div>
-                            </motion.div>
+                            <StatCounter value={15} suffix="+" label="Years Experience" />
+                            <StatCounter value={80} suffix="+" label="Luxury Properties" />
                         </div>
                     </motion.div>
 
@@ -62,6 +56,50 @@ const About = () => {
                 </div>
             </div>
         </main>
+    );
+};
+
+const StatCounter = ({ value, suffix, label }) => {
+    const [count, setCount] = React.useState(0);
+    const nodeRef = React.useRef(null);
+    const isInView = React.useMemo(() => {
+        // Simple shim for intersection observer or use a library hook if available
+        // For now, we'll auto-start on mount or use a simple timer
+        return true;
+    }, []);
+
+    React.useEffect(() => {
+        let startTime;
+        let animationFrame;
+        const duration = 2000;
+
+        const animate = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            const percentage = Math.min(progress / duration, 1);
+
+            // Ease out quart
+            const ease = 1 - Math.pow(1 - percentage, 4);
+
+            setCount(Math.floor(value * ease));
+
+            if (progress < duration) {
+                animationFrame = requestAnimationFrame(animate);
+            }
+        };
+
+        animationFrame = requestAnimationFrame(animate);
+
+        return () => cancelAnimationFrame(animationFrame);
+    }, [value]);
+
+    return (
+        <motion.div whileHover={{ y: -5, color: 'var(--accent-gold-hover)' }} transition={{ duration: 0.3 }}>
+            <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', color: 'var(--accent-gold)' }}>
+                {count}{suffix}
+            </div>
+            <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-tertiary)' }}>{label}</div>
+        </motion.div>
     );
 };
 

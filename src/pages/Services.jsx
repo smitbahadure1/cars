@@ -59,35 +59,44 @@ const Services = () => {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -5, boxShadow: 'var(--shadow-gold)', borderColor: 'rgba(197, 160, 89, 0.4)' }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            whileHover={{
+                                y: -10,
+                                boxShadow: '0 20px 40px -10px rgba(197, 160, 89, 0.2)',
+                                borderColor: 'rgba(197, 160, 89, 0.4)',
+                                background: 'rgba(255, 255, 255, 0.04)'
+                            }}
                             className="glass"
                             style={{
                                 padding: '3rem',
                                 border: '1px solid var(--glass-border)',
-                                transition: 'var(--transition)'
+                                transition: 'background 0.3s ease',
+                                height: '100%',
+                                display: 'flex',
+                                flexDirection: 'column'
                             }}
                         >
                             <div style={{
                                 color: 'var(--accent-gold)',
                                 marginBottom: '2rem',
-                                padding: '15px',
-                                background: 'rgba(197, 160, 89, 0.1)',
-                                borderRadius: '50%',
-                                width: 'fit-content'
+                                padding: '18px',
+                                background: 'rgba(197, 160, 89, 0.08)',
+                                borderRadius: '16px',
+                                width: 'fit-content',
+                                border: '1px solid rgba(197, 160, 89, 0.2)'
                             }}>
                                 {service.icon}
                             </div>
-                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', fontFamily: 'var(--font-heading)' }}>{service.title}</h3>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: '1.7' }}>{service.desc}</p>
+                            <h3 style={{ fontSize: '1.7rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}>{service.title}</h3>
+                            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.7', flex: 1 }}>{service.desc}</p>
 
-                            <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <ul style={{ listStyle: 'none', padding: 0, marginTop: 'auto' }}>
                                 {service.features.map((feature, fIdx) => (
-                                    <li key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', color: 'var(--text-primary)', fontSize: '0.95rem' }}>
-                                        <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-gold)' }} />
+                                    <li key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.8rem', color: 'var(--text-primary)', fontSize: '0.9rem', opacity: 0.9 }}>
+                                        <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--accent-gold)', boxShadow: '0 0 8px var(--accent-gold)' }} />
                                         {feature}
                                     </li>
                                 ))}
