@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Users, ShieldCheck } from 'lucide-react';
 import Newsletter from '../components/Newsletter';
+import UploadArea from '../components/UploadArea';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -194,6 +195,17 @@ const Home = () => {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* OEM Verification Section */}
+            <section className="section-padding" style={{ background: 'var(--bg-dark)', borderTop: '1px solid var(--border)' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2 style={{ fontSize: '3rem', marginBottom: '1rem' }}>OEM Port Validation</h2>
+                        <p style={{ color: 'var(--text-secondary)' }}>Upload your technical documentation for instant AI-powered compliance analysis.</p>
+                    </div>
+                    <UploadArea title="Upload OEM Specification (.pdf)" accept=".pdf" />
                 </div>
             </section>
 
