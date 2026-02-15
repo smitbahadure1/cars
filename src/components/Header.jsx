@@ -26,7 +26,7 @@ const Header = () => {
     <header className={`nav-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
         <NavLink to="/" className="logo">
-          Luxe<span>Consult</span>
+          Smit<span>Automotive</span>
         </NavLink>
 
         <nav className="nav-links">

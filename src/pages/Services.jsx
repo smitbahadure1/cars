@@ -5,39 +5,39 @@ import { Layout, Globe, PenTool, BarChart, Users, Heart } from 'lucide-react';
 const services = [
     {
         icon: <BarChart size={32} />,
-        title: 'Operational Audit & Optimization',
-        desc: 'Deep-dive analysis of P&L, SOPs, and departmental workflows to identify hidden efficiencies.',
-        features: ['Cost Control Strategies', 'Process Re-engineering', 'Tech Stack Integration']
+        title: 'Manufacturing Process Audit',
+        desc: 'Deep-dive analysis of assembly lines, supply chain logistics, and production workflows to identify hidden efficiencies.',
+        features: ['JIT Inventory Optimization', 'Robotic Integration', 'Six Sigma Audits']
     },
     {
         icon: <Layout size={32} />,
-        title: 'Brand Identity & Positioning',
-        desc: 'Crafting a unique narrative and visual language that resonates with the modern luxury guest.',
-        features: ['Market Gap Analysis', 'Concept Development', 'Guest Persona Mapping']
+        title: 'OEM Brand Positioning',
+        desc: 'Crafting a unique value proposition for Tier 1 and Tier 2 suppliers in the competitive automotive landscape.',
+        features: ['Global Market Analysis', 'OEM Partner Mapping', 'Competitive Benchmarking']
     },
     {
         icon: <Users size={32} />,
-        title: 'Talent Culture & Training',
-        desc: 'Building high-performance teams through bespoke training programs and cultural alignment.',
-        features: ['Service Excellence Workshops', 'Leadership Coaching', 'Recruitment Strategy']
+        title: 'Engineering Culture & Training',
+        desc: 'Building high-performance technical teams through bespoke training programs and engineering excellence.',
+        features: ['CAD/CAM Workshops', 'Technical Leadership', 'Advanced R&D Training']
     },
     {
         icon: <Globe size={32} />,
-        title: 'Revenue Management',
-        desc: 'Sophisticated pricing strategies to maximize RevPAR and TrevPAR across all seasons.',
-        features: ['Dynamic Pricing Models', 'Distribution Audit', 'Ancillary Revenue Growth']
+        title: 'Supply Chain Management',
+        desc: 'Sophisticated logistics strategies to maximize part availability and minimize production downtime.',
+        features: ['Global Sourcing Audits', 'Vendor Management', 'Risk Mitigation Planning']
     },
     {
         icon: <PenTool size={32} />,
-        title: 'Pre-Opening Consulting',
-        desc: 'Turning architectural plans into living, breathing hotel operations through structured launches.',
-        features: ['Critical Path Management', 'OS&E Procurement', 'Soft Launch Oversight']
+        title: 'Prototyping & R&D Consulting',
+        desc: 'Turning concepts into road-ready prototypes through structured engineering phases.',
+        features: ['Phase Gate Management', 'Materials Engineering', 'Safety Testing Oversight']
     },
     {
         icon: <Heart size={32} />,
-        title: 'Guest Experience Design',
-        desc: 'Mapping and perfecting every touchpoint of the guest journey from booking to departure.',
-        features: ['Touchpoint Audit', 'Signature Service Rituals', 'Loyalty Program Design']
+        title: 'Vehicle Quality Assurance',
+        desc: 'Mapping and perfecting every technical specification from design to delivery.',
+        features: ['ISO Standards Compliance', 'Zero-Defect Strategy', 'Testing Protocol Design']
     }
 ];
 
@@ -51,7 +51,7 @@ const Services = () => {
                     </h4>
                     <h1 style={{ fontSize: '4rem', marginBottom: '2rem' }}>Comprehensive <span style={{ fontStyle: 'italic' }}>Expertise</span></h1>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)' }}>
-                        We provide specialized consulting across the entire hospitality value chain, tailored to your property's unique challenges.
+                        We provide specialized consulting across the entire automotive value chain, tailored to your manufacturing challenges.
                     </p>
                 </div>
 

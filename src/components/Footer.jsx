@@ -9,10 +9,9 @@ const Footer = () => {
             <div className="container">
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', marginBottom: '4rem' }}>
                     <div>
-                        <div className="logo" style={{ marginBottom: '1.5rem' }}>LuxeConsult</div>
+                        <div className="logo" style={{ marginBottom: '1.5rem' }}>SmitAutomotive</div>
                         <p style={{ color: 'var(--text-secondary)', maxWidth: '300px' }}>
-                            Elevating hospitality standards through strategic consulting and operational excellence.
-                            Transforming visions into world-class guest experiences.
+                            Elevating automotive engineering standards through strategic OEM consulting and manufacturing excellence.
                         </p>
                     </div>
 
@@ -40,14 +39,14 @@ const Footer = () => {
                         <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
                             <motion.a whileHover={{ color: 'var(--accent-gold)', y: -3 }} href="#" style={{ color: 'var(--text-secondary)' }}><Linkedin size={20} /></motion.a>
                             <motion.a whileHover={{ color: 'var(--accent-gold)', y: -3 }} href="#" style={{ color: 'var(--text-secondary)' }}><Instagram size={20} /></motion.a>
-                            <motion.a whileHover={{ color: 'var(--accent-gold)', y: -3 }} href="mailto:contact@luxeconsult.com" style={{ color: 'var(--text-secondary)' }}><Mail size={20} /></motion.a>
+                            <motion.a whileHover={{ color: 'var(--accent-gold)', y: -3 }} href="mailto:contact@smitautomotive.com" style={{ color: 'var(--text-secondary)' }}><Mail size={20} /></motion.a>
                         </div>
                     </div>
                 </div>
 
                 <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                     <p style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>
-                        © 2026 LuxeConsult Hospitality Practice. All rights reserved.
+                        © 2026 Smit Automotive Practice. All rights reserved.
                     </p>
                     <div style={{ display: 'flex', gap: '2rem' }}>
                         <a href="#" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Privacy Policy</a>

@@ -19,20 +19,20 @@ const Home = () => {
                         style={{ maxWidth: '800px', position: 'relative', zIndex: 2 }}
                     >
                         <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>
-                            Strategic Hospitality Consulting
+                            Strategic Automotive OEM Solutions
                         </h4>
                         <h1 style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)', marginBottom: '2rem', lineHeight: 1.1 }}>
-                            Elevating the <span style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Standard</span> of Guest Experience.
+                            Engineering the <span style={{ fontStyle: 'italic', color: 'var(--accent-gold)' }}>Future</span> of Automotive Excellence.
                         </h1>
                         <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: '3rem', maxWidth: '600px' }}>
-                            We help boutique hotels and luxury resorts optimize operations, increase RevPAR, and create unforgettable guest journeys.
+                            We help automotive manufacturers and Tier 1 suppliers optimize production, increase supply chain efficiency, and create world-class vehicles.
                         </p>
                         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
                             <button className="btn btn-primary" onClick={() => navigate('/contact')}>
                                 Book a Consultation <ArrowRight size={18} style={{ marginLeft: '10px' }} />
                             </button>
                             <button className="btn btn-outline" onClick={() => navigate('/services')}>
-                                Explore Services
+                                OEM Services
                             </button>
                         </div>
                     </motion.div>
@@ -129,10 +129,10 @@ const Home = () => {
                         Trusted by World-Class Institutions
                     </p>
                     <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', opacity: 0.5, flexWrap: 'wrap', gap: '3rem' }}>
-                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>ASTON REGENCY</span>
-                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>THE NOIR HOTEL</span>
-                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>VELVET RESORTS</span>
-                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>LUMIÈRE SUITES</span>
+                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>NEXUS MOTORS</span>
+                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>APEX DYNAMICS</span>
+                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>VELOCITY OEM</span>
+                        <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>LUMINA AUTO</span>
                     </div>
                 </div>
             </section>
@@ -149,9 +149,9 @@ const Home = () => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         {[
-                            { icon: <TrendingUp size={32} />, title: 'Operational Efficiency', desc: 'Streamlining back-of-house processes to maximize profitability without compromising service.' },
-                            { icon: <Users size={32} />, title: 'Staff Development', desc: 'Curating training programs that empower team members to deliver exceptional guest moments.' },
-                            { icon: <ShieldCheck size={32} />, title: 'Brand Positioning', desc: 'Defining your unique value proposition in an increasingly competitive luxury market.' }
+                            { icon: <TrendingUp size={32} />, title: 'Production Efficiency', desc: 'Streamlining assembly line processes to maximize throughput and minimize waste.' },
+                            { icon: <Users size={32} />, title: 'Engineering Support', desc: 'Providing expert consultancy for vehicle design, testing, and regulatory compliance.' },
+                            { icon: <ShieldCheck size={32} />, title: 'OEM Compliance', desc: 'Ensuring your parts and processes meet the highest global automotive standards.' }
                         ].map((pillar, idx) => (
                             <motion.div
                                 key={idx}
@@ -177,10 +177,10 @@ const Home = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '4rem', textAlign: 'center' }}>
                         {[
-                            { label: 'Revenue Growth', value: '35%' },
-                            { label: 'Partner Hotels', value: '150+' },
-                            { label: 'Guest Score', value: '4.9/5' },
-                            { label: 'Markets Covered', value: '24' }
+                            { label: 'Production Growth', value: '45%' },
+                            { label: 'OEM Partners', value: '80+' },
+                            { label: 'Quality Score', value: '99.9%' },
+                            { label: 'Global Markets', value: '18' }
                         ].map((stat, idx) => (
                             <motion.div
                                 key={idx}

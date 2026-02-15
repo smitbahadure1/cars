@@ -14,19 +14,19 @@ const About = () => {
                         <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>
                             The Practice
                         </h4>
-                        <h1 style={{ fontSize: '4rem', marginBottom: '2rem' }}>Experience Meets <span style={{ fontStyle: 'italic' }}>Insight.</span></h1>
+                        <h1 style={{ fontSize: '4rem', marginBottom: '2rem' }}>Experience Meets <span style={{ fontStyle: 'italic' }}>Precision.</span></h1>
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-                            Founded by industry veterans with over three decades of collective experience in luxury hospitality management,
-                            LuxeConsult was born from a simple observation: the most successful properties are those that balance technical
-                            operational rigor with human-centric hospitality.
+                            Founded by automotive industry veterans with over three decades of collective experience in OEM manufacturing and engineering,
+                            Smit Automotive was born from a singular mission: to help manufacturers solve complex production challenges through
+                            technical precision and strategic innovation.
                         </p>
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
-                            We don't just provide reports; we embed ourselves within your team to drive cultural and operational change
-                            that yields measurable financial results.
+                            We don't just provide reports; we embed ourselves within your engineering teams to drive operational changes
+                            that yield measurable improvements in quality and throughput.
                         </p>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                             <StatCounter value={15} suffix="+" label="Years Experience" />
-                            <StatCounter value={80} suffix="+" label="Luxury Properties" />
+                            <StatCounter value={80} suffix="+" label="OEM Partners" />
                         </div>
                     </motion.div>
 
@@ -47,9 +47,9 @@ const About = () => {
                         {/* Overlay card */}
                         <div className="glass" style={{ position: 'absolute', bottom: '-2rem', left: '-2rem', padding: '2.5rem', maxWidth: '300px', borderLeft: '4px solid var(--accent-gold)' }}>
                             <p style={{ fontStyle: 'italic', marginBottom: '1rem', color: '#fff' }}>
-                                "Hospitality is not a department, it's a philosophy that must permeate every level of an organization."
+                                "Engineering excellence is not just about the parts, it's about the precision of the process that creates them."
                             </p>
-                            <div style={{ fontWeight: 600 }}>Alexander Sterling</div>
+                            <div style={{ fontWeight: 600 }}>Smit Bahadure</div>
                             <div style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Principal Consultant</div>
                         </div>
                     </motion.div>
