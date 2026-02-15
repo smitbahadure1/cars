@@ -41,7 +41,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <div style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)', textTransform: 'uppercase' }}>Email Us</div>
-                                    <div style={{ fontSize: '1.1rem' }}>consult@luxeconsult.com</div>
+                                    <div style={{ fontSize: '1.1rem' }}>consult@smitautomotive.com</div>
                                 </div>
                             </div>
 
@@ -105,10 +105,10 @@ const Contact = () => {
                                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                                 >
                                     <option value="">Select Service of Interest</option>
-                                    <option value="audit">Operational Audit</option>
-                                    <option value="brand">Brand Strategy</option>
-                                    <option value="training">Staff Training</option>
-                                    <option value="opening">Pre-Opening</option>
+                                    <option value="audit">Manufacturing Audit</option>
+                                    <option value="brand">OEM Strategy</option>
+                                    <option value="training">Engineering Training</option>
+                                    <option value="opening">Plant Pre-Opening</option>
                                 </select>
                             </div>
                             <div className="input-group">
@@ -135,9 +135,9 @@ const Contact = () => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
                         {[
-                            { q: "What is the typical engagement duration?", a: " Engagements vary from a 2-week intensive audit to long-term strategic partnerships spanning several months." },
-                            { q: "Do you offer international consulting?", a: "Yes, our team is global and we work with luxury properties across Europe, the Americas, and the Middle East." },
-                            { q: "How soon can we expect results?", a: "Operational efficiencies often show impact within the first 30 days, while brand repositioning is a long-term value play." }
+                            { q: "What is the typical engagement duration?", a: " Engagements vary from a 2-week intensive manufacturing audit to long-term strategic partnerships spanning several production cycles." },
+                            { q: "Do you offer international consulting?", a: "Yes, our team is global and we work with OEM properties across Europe, Asia, and North America." },
+                            { q: "How soon can we expect results?", a: "Production efficiencies often show impact within the first 60 days, while global supply chain recalibrations take longer." }
                         ].map((faq, idx) => (
                             <motion.div
                                 key={idx}

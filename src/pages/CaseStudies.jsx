@@ -4,28 +4,28 @@ import { ExternalLink } from 'lucide-react';
 
 const cases = [
     {
-        title: 'The Riviera Collection',
-        category: 'Luxury Resort Portfolios',
+        title: 'Nexus Powertrain Systems',
+        category: 'OEM Manufacturing',
         stat: '+32%',
-        statLabel: 'Portfolio EBITDA Growth',
+        statLabel: 'Production Yield Increase',
         image: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(mock-img-1)',
-        desc: 'Repositioning three boutique coastal properties into a unified luxury brand, resulting in record-breaking occupancy rates.'
+        desc: 'Optimizing assembly line automation for a Tier 1 engine component manufacturer, resulting in record-breaking throughput levels.'
     },
     {
-        title: 'Urban Sanctuary Suites',
-        category: 'City Center Hospitality',
+        title: 'Apex Dynamics Solutions',
+        category: 'Supply Chain Optimization',
         stat: '94%',
-        statLabel: 'Direct Booking Ratio',
+        statLabel: 'On-Time Part Delivery',
         image: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(mock-img-2)',
-        desc: 'A comprehensive digital and operational transformation that broke reliance on OTAs and built a loyal direct-guest base.'
+        desc: 'A comprehensive digital transformation of inventory management that eliminated production delays and built a robust JIT network.'
     },
     {
-        title: 'Lakeside Manor & Spa',
-        category: 'Operational Turnaround',
+        title: 'Stellar Auto Parts',
+        category: 'Quality Turnaround',
         stat: '-18%',
-        statLabel: 'Labor Cost Reduction',
+        statLabel: 'Defect Rate Reduction',
         image: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(mock-img-3)',
-        desc: 'Optimized back-of-house workflows and cross-departmental training to restore profitability to a historic estate.'
+        desc: 'Implemented advanced Six Sigma protocols and engineering audits to restore global compliance standards to a legacy OEM plant.'
     }
 ];
 
