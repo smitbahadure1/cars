@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import CaseStudies from './pages/CaseStudies';
+import Careers from './pages/Careers';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import Contact from './pages/Contact';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>

@@ -110,7 +110,7 @@ const Home = () => {
                                 <Star color="var(--accent-gold)" size={24} />
                             </div>
                             <div>
-                                <div style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Guest Satisfaction</div>
+                                <div style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Client Satisfaction</div>
                                 <div style={{ fontSize: '1.5rem', fontWeight: 700 }}>4.9/5.0</div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
                         <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>Strategic Excellence</h2>
                         <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-                            Our methodology combines data-driven insights with the timeless art of hospitality.
+                            Our methodology combines data-driven insights with advanced engineering precision.
                         </p>
                     </div>
 

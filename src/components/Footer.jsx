@@ -19,8 +19,9 @@ const Footer = () => {
                         <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Quick Links</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <NavLink to="/services" className="nav-link" style={{ fontSize: '0.9rem' }}>Services</NavLink>
-                            <NavLink to="/about" className="nav-link" style={{ fontSize: '0.9rem' }}>About Us</NavLink>
                             <NavLink to="/case-studies" className="nav-link" style={{ fontSize: '0.9rem' }}>Case Studies</NavLink>
+                            <NavLink to="/careers" className="nav-link" style={{ fontSize: '0.9rem' }}>Careers</NavLink>
+                            <NavLink to="/about" className="nav-link" style={{ fontSize: '0.9rem' }}>About Us</NavLink>
                             <NavLink to="/contact" className="nav-link" style={{ fontSize: '0.9rem' }}>Contact</NavLink>
                         </div>
                     </div>
@@ -28,9 +29,9 @@ const Footer = () => {
                     <div>
                         <h4 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>Global Offices</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                            <p>London – Mayfair</p>
-                            <p>New York – Manhattan</p>
-                            <p>Dubai – DIFC</p>
+                            <p>Detroit – Tech Center</p>
+                            <p>Stuttgart – Innovation Hub</p>
+                            <p>Pune – Engineering Center</p>
                         </div>
                     </div>
 
@@ -49,7 +50,7 @@ const Footer = () => {
                         © 2026 Smit Automotive Practice. All rights reserved.
                     </p>
                     <div style={{ display: 'flex', gap: '2rem' }}>
-                        <a href="#" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Privacy Policy</a>
+                        <NavLink to="/privacy" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Privacy Policy</NavLink>
                         <a href="#" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>Terms of Service</a>
                     </div>
                 </div>

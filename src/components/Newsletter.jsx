@@ -23,10 +23,10 @@ const Newsletter = () => {
             <div className="container">
                 <div className="glass" style={{ padding: '5rem 2rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
                     <div style={{ position: 'relative', zIndex: 1 }}>
-                        <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Insights for Modern Hoteliers</h2>
+                        <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Insights for Engineering Leaders</h2>
                         <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 3rem', fontSize: '1.1rem' }}>
-                            Join 5,000+ industry leaders who receive our weekly briefing on hospitality trends,
-                            operational efficiency, and guest experience strategy.
+                            Join 5,000+ industry experts who receive our weekly briefing on automotive OEM trends,
+                            manufacturing optimization, and supply chain strategy.
                         </p>
 
                         {status === 'success' ? (
