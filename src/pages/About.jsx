@@ -41,7 +41,7 @@ const About = () => {
                             <div style={{ height: '100%', width: '100%', background: 'linear-gradient(135deg, #0f0f10 0%, #1a1a1c 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
                                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'radial-gradient(circle at 30% 20%, rgba(197, 160, 89, 0.08) 0%, transparent 60%)' }}></div>
                                 <div style={{ position: 'absolute', bottom: 0, right: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%)' }}></div>
-                                <div style={{ color: 'rgba(255,255,255,0.03)', fontSize: '12rem', fontFamily: 'var(--font-heading)', letterSpacing: '-0.05em', userSelect: 'none' }}>Lc</div>
+                                <div style={{ color: 'rgba(255,255,255,0.03)', fontSize: '12rem', fontFamily: 'var(--font-heading)', letterSpacing: '-0.05em', userSelect: 'none' }}>SA</div>
                             </div>
                         </div>
                         {/* Overlay card */}
